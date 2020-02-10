@@ -1,0 +1,40 @@
+<form  [formGroup]="lectureform" (ngSubmit)="saveLecture()">
+                  
+  <!-- for company list --> 
+  <div class="row">
+    <div class="form-group">
+      <label class="control-label">department</label><span style="color: red">*</span>
+      <p-dropdown formControlName="department" #com  [options]="departmentList" [filter]="true" optionLabel="name" placeholder="Select a department" [style]="{'width':'100%'}"></p-dropdown>
+      <!-- fro validation -->
+    <!-- <app-field-error-display [errorIcon]="false" [displayError]="isFieldValid('company')" errorMsg="Company is required"></app-field-error-display> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="form-control-1">Registrations Number</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" formControlName="registrationNumber" placeholder="Enter Registrations number">
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+    <label class="col-sm-3 control-label" for="form-control-1">lecture Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    </div>
+  </div>
+  </div>
+
+  <!-- <div class="row">
+    <label class="col-sm-3 control-label" for="form-control-1">Faculty Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    </div>
+  </div> -->
+
+
+<button type="submit" class="btn btn-space btn-success"><i class="icon icon-left mdi mdi-check"></i>Submit</button>                          
+</form>

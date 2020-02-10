@@ -1,0 +1,35 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="row">             
+            <div class="box-header with-border">
+              <div class="text-left componet-heading">department  List</div>
+            </div>
+            <div class=" pull-left">
+              <button type="button" class="btn-lg btn-custom btn-dark-blue " data-toggle="modal"
+                  (click)="openModal(addDepartmentTemplate)">+ Add  department</button>
+            </div>
+          </div>
+          <div class="row">          
+            <app-department-list></app-department-list>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- for add company modal -->
+<ng-template #addDepartmentTemplate>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">add department</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+      <app-add-department></app-add-department>
+  </div>
+</ng-template>

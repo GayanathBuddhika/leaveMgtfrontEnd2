@@ -1,0 +1,52 @@
+<div class="" id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row row-stat">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading panel-heading-divider">Add Faculty </div>
+          <div class="panel-body">
+            <div class="xs-mt-10 xs-mb-10  ">
+              <div class="row">
+                <div class="col-md-8">
+
+                  <form  [formGroup]="departmentForm" (ngSubmit)="saveFaculty()">
+                  
+                      <!-- for company list --> 
+                      <div class="row">
+                        <div class="form-group">
+                          <label class="control-label">Faculty</label><span style="color: red">*</span>
+                          <p-dropdown formControlName="faculty" #com (onChange)="onSelectFaculty($event.value)"  [options]="facultyList" [filter]="true" optionLabel="name" placeholder="Select a Faculty" [style]="{'width':'100%'}"></p-dropdown>
+                          <!-- fro validation -->
+                        <!-- <app-field-error-display [errorIcon]="false" [displayError]="isFieldValid('company')" errorMsg="Company is required"></app-field-error-display> -->
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="form-group">
+                        <label class="col-sm-3 control-label" for="form-control-1">Faculty Name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+                        </div>
+                      </div>
+                      </div>
+
+                      <!-- <div class="row">
+                        <label class="col-sm-3 control-label" for="form-control-1">Faculty Name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+                        </div>
+                      </div> -->
+
+                    
+                    <button type="submit" class="btn btn-space btn-success"><i class="icon icon-left mdi mdi-check"></i>Submit</button>                          
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
