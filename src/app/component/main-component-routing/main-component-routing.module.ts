@@ -1,3 +1,4 @@
+import { UserComponent } from './../user/user.component';
 import { StudentCourseComponent } from './../student-course/student-course.component';
 import { CourseComponent } from './../course/course.component';
 import { DegreeProgramComponent } from './../degree-program/degree-program.component';
@@ -20,77 +21,77 @@ const routes: Routes = [
   //   }
   // },
   {
-    path: 'faculty',
+    path: 'user',
     pathMatch: 'full',
-    component: FacultyComponent,
+    component: UserComponent,
     data: {
       title: 'faculty Component'
     }
   },
-  {
-    path: 'result',
-    // pathMatch: 'full',
-    component: MainResultComponent,
-    data: {
-      title: 'mainResult Component'
-    }
-  },
-  {
-    path: 'addFaculty',
-    // pathMatch: 'full',
-    component: AddFacultyComponent,
-    data: {
-      title: 'mainResult Component'
-    }
-  },
-  {
-    path: 'department',
-    // pathMatch: 'full',
-    component: DepartmentComponent,
-    data: {
-      title: 'Department'
-    }
-  },
-   {
-    path: 'student',
-    // pathMatch: 'full',
-    component: StudentComponent,
-    data: {
-      title: 'Department'
-    }
-  },
-  {
-    path: 'degreeProgram',
-    // pathMatch: 'full',
-    component: DegreeProgramComponent,
-    data: {
-      title: 'Department'
-    }
-  },
-  {
-    path: 'lecture',
-    // pathMatch: 'full',
-    component: LectureComponent,
-    data: {
-      title: 'Department'
-    }
-  },
-  {
-    path: 'course',
-    // pathMatch: 'full',
-    component: CourseComponent,
-    data: {
-      title: 'Department'
-    }
-  },
-  {
-    path: 'studentCourse',
-    // pathMatch: 'full',
-    component: StudentCourseComponent,
-    data: {
-      title: 'Department'
-    }
-  }
+  // {
+  //   path: 'result',
+  //   // pathMatch: 'full',
+  //   component: MainResultComponent,
+  //   data: {
+  //     title: 'mainResult Component'
+  //   }
+  // },
+  // {
+  //   path: 'addFaculty',
+  //   // pathMatch: 'full',
+  //   component: AddFacultyComponent,
+  //   data: {
+  //     title: 'mainResult Component'
+  //   }
+  // },
+  // {
+  //   path: 'department',
+  //   // pathMatch: 'full',
+  //   component: DepartmentComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // },
+  //  {
+  //   path: 'student',
+  //   // pathMatch: 'full',
+  //   component: StudentComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // },
+  // {
+  //   path: 'degreeProgram',
+  //   // pathMatch: 'full',
+  //   component: DegreeProgramComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // },
+  // {
+  //   path: 'lecture',
+  //   // pathMatch: 'full',
+  //   component: LectureComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // },
+  // {
+  //   path: 'course',
+  //   // pathMatch: 'full',
+  //   component: CourseComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // },
+  // {
+  //   path: 'studentCourse',
+  //   // pathMatch: 'full',
+  //   component: StudentCourseComponent,
+  //   data: {
+  //     title: 'Department'
+  //   }
+  // }
 
 
 

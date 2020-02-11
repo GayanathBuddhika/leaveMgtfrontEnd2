@@ -1,7 +1,7 @@
-<p-table #dt [columns]="headers" [value]="degreeCourseList" [paginator]="true" [rows]="10" [responsive]="true"
+<!-- <p-table #dt [columns]="headers" [value]="degreeCourseList" [paginator]="true" [rows]="10" [responsive]="true"
 [resizableColumns]="true" [columnResizeMode]="'expand'" [autoLayout]="true" [rowsPerPageOptions]="[10,25,50,100]">
 
-<!-- this is for table headers -->
+
 <ng-template pTemplate="header" let-headers>  
   <tr>
     <th *ngFor="let th of headers">
@@ -11,7 +11,7 @@
   </tr>
 </ng-template>
 
-<!-- this is for table body -->
+
 <ng-template pTemplate="body" let-degreeCourse let-rowIndex="rowIndex">
   <tr>
     <td>{{ rowIndex+1}}</td>
@@ -20,24 +20,12 @@
     <td>{{ degreeCourse.degreeProgram.department.name}}</td>
     <td>{{ degreeCourse.lecture.name}}</td>
   
-    <!-- <td>{{ faculty.address}}</td>
-    <td>{{ faculty.email}}</td>
-    <td>{{ faculty.businessType.type}}</td> -->
-    <!-- <td align="center"><i class="material-icons mi-edit" style="cursor: pointer;" (click)="update(company,companyEditTemplate)"> &#xE254; </i></td>
-    <td align="center"><i class="material-icons mi-delete" style="cursor: pointer;" (click)="delete(company)"> &#xE872; </i></td>  -->
-     
-      <!-- <button class="btn-lg btn-custom  btn-danger" *ngIf="company.isEnabled" (click)="changeIsEnabled(company,0)">click to Disabled</button> -->
-      <!-- <button class="btn-lg btn-custom  btn-success" *ngIf="!company.isEnabled" (click)="changeIsEnabled(company,1)">click to Enabled</button> -->
-
-                   
-    <!-- <td align="center"><i class="material-icons mi-blue" style="cursor: pointer;" (click)="onClickPlan(company,subscriptionListTemplate)"> &#xE064; </i></td>                  -->
+   
    
     <td align="center"><i class="fa fa-edit fa-2x text-blue" style="cursor: pointer;" (click)="update(degreeCourse,degreCourseEditTemplate)"></i></td>
     <td align="center"><i class="fa fa-trash fa-2x text-red" style="cursor: pointer;" (click)="delete(degreeCourse)"></i>
     </td>
-    <!-- <td align="center"><button type="button" class="btn btn-success"
-        (click)="onClickPlan(company,subscriptionListTemplate)">&#xE064;</button></td> -->
-
+   
   </tr>
 </ng-template>
 
@@ -51,7 +39,7 @@
 
 </p-table>
 
-<!-- for edit button -->
+
 <ng-template #degreCourseEditTemplate>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Edit Course</h4>
@@ -62,4 +50,4 @@
   <div class="modal-body">
     <app-add-course [onSelectedDegreeCourse]="onSelectedDegreeCourse" [edit]="true"></app-add-course>
   </div>
-</ng-template>
+</ng-template> -->

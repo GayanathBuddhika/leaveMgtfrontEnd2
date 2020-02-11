@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultService } from 'app/service/result.service';
-import { Result } from 'app/model/Result';
+// import { Result } from 'app/model/Result';
 
 @Component({
   selector: 'app-main-result',
@@ -8,37 +8,39 @@ import { Result } from 'app/model/Result';
   styleUrls: ['./main-result.component.scss']
 })
 export class MainResultComponent implements OnInit {
-  results: Result[]=[];
+  // results: Result[]=[];
 
-  firstYearResults: Result[] = [];
-  secondYearResults: Result[] = [];
-  thredYearResults: Result[] = [];
-  forthtYearResults: Result[] = [];
-  year1sem1sem2: Boolean = false;
-  year2sem1sem2: Boolean = false;
-  year3sem1sem2: Boolean = false;
-  year4sem1sem2: Boolean = false;
-  absentOrRepeetInYear1: Boolean = false;
-  absentOrRepeetInYear2: Boolean = false;
-  absentOrRepeetInYear3: Boolean = false;
-  absentOrRepeetInYear4: Boolean = false;
-  gpa1Year: number;
-  gpa2Year: number;
-  gpa3Year: number;
-  gpa4Year: number;
-  totalCreditYear1: number;
-  totalCreditYear2: number;
-  totalCreditYear3: number;
-  totalCreditYear4: number;
+  // firstYearResults: Result[] = [];
+  // secondYearResults: Result[] = [];
+  // thredYearResults: Result[] = [];
+  // forthtYearResults: Result[] = [];
+  // year1sem1sem2: Boolean = false;
+  // year2sem1sem2: Boolean = false;
+  // year3sem1sem2: Boolean = false;
+  // year4sem1sem2: Boolean = false;
+  // absentOrRepeetInYear1: Boolean = false;
+  // absentOrRepeetInYear2: Boolean = false;
+  // absentOrRepeetInYear3: Boolean = false;
+  // absentOrRepeetInYear4: Boolean = false;
+  // gpa1Year: number;
+  // gpa2Year: number;
+  // gpa3Year: number;
+  // gpa4Year: number;
+  // totalCreditYear1: number;
+  // totalCreditYear2: number;
+  // totalCreditYear3: number;
+  // totalCreditYear4: number;
 
-  finalGpa: number;
-  calFianalGpa: boolean = false;
-  msgAwardOfClass: string;
+  // finalGpa: number;
+  // calFianalGpa: boolean = false;
+  // msgAwardOfClass: string;
 
-  constructor(private resultViewService: ResultService) { }
+  constructor(
+    // private resultViewService: ResultService
+    ) { }
 
   ngOnInit() {
-    this.getResultByEpNumber();
+    // this.getResultByEpNumber();
   }
 
 

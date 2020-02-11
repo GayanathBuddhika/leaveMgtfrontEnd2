@@ -10,30 +10,30 @@ import { Subscription } from 'rxjs';
 })
 export class FacultyComponent implements OnInit {
   // --- for modal
-  modalRef: BsModalRef;
+  // modalRef: BsModalRef;
    // --- Subscription 
-   private subscription: Subscription = new Subscription();
+  //  private subscription: Subscription = new Subscription();
   constructor(
-    private modalService: BsModalService,
-    private facultyService: FacultyService
+    // private modalService: BsModalService,
+    // private facultyService: FacultyService
   ) { }
 
   ngOnInit() {
-    console.log("create ************");
-      // --- add subscribe methode to the subscription object
-      this.subscription.add(
-        this.facultyService.get_ngxModal_add_$().subscribe(data =>{
-          if(data){
-            this.modalRef.hide();
-            this.facultyService._set_ngxModal_add(false)
-          }
+    // console.log("create ************");
+    //   // --- add subscribe methode to the subscription object
+    //   this.subscription.add(
+    //     this.facultyService.get_ngxModal_add_$().subscribe(data =>{
+    //       if(data){
+    //         this.modalRef.hide();
+    //         this.facultyService._set_ngxModal_add(false)
+    //       }
           
-        })
-      );
+    //     })
+    //   );
   }
 
-  openModal(template: TemplateRef<any>){
-    this.modalRef = this.modalService.show(template,{class: 'modal-lg'});
-  }
+  // openModal(template: TemplateRef<any>){
+  //   this.modalRef = this.modalService.show(template,{class: 'modal-lg'});
+  // }
 
 }

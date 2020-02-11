@@ -1,0 +1,56 @@
+<p-table #dt [columns]="headers" [value]="userList" [paginator]="true" [rows]="10" [responsive]="true"
+[resizableColumns]="true" [columnResizeMode]="'expand'" [autoLayout]="true" [rowsPerPageOptions]="[10,25,50,100]">
+
+
+<ng-template pTemplate="header" let-headers>  
+  <tr>
+    <th *ngFor="let th of headers">
+      {{th.header}}
+
+    </th>
+  </tr>
+</ng-template>
+
+
+<ng-template pTemplate="body" let-user let-rowIndex="rowIndex">
+  <tr>
+    <td>{{ rowIndex+1}}</td>
+    <td>{{ user.employeeId}}</td>
+    <td>{{ user.firstName}}</td>
+    <td>{{ user.lastName}}</td>  
+    <td>{{ user.email}}</td>  
+    <td>{{ user.phoneNo}}</td>
+    <td>{{ user.address}}</td>
+    
+   
+    
+    <td align="center"><i class="fa fa-edit fa-2x text-blue" style="cursor: pointer;" (click)="update(user,addUserTemplate)"></i></td>
+    <td align="center"><i class="fa fa-trash fa-2x text-red" style="cursor: pointer;" (click)="delete(user)"></i>
+    </td>
+  
+
+  </tr>
+</ng-template>
+
+<ng-template pTemplate="emptymessage" let-headers>
+        <tr>
+            <td [attr.colspan]="headers.length">
+                <p class="text-center"><b>No records found</b></p>
+            </td>
+        </tr>
+    </ng-template>
+
+</p-table>
+
+
+<ng-template #addUserTemplate>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">add User</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRefOfUserList.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+      <app-adduser [edit]="true" [selectedUser] = "selectedUser" ></app-adduser>
+  </div>
+</ng-template>

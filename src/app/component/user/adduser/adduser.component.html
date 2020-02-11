@@ -1,0 +1,74 @@
+<form  [formGroup]="userForm" (ngSubmit)="saveUser()">
+
+
+    <div class="row">
+      <div class="form-group">
+        <label class="control-label">Department</label><span style="color: red">*</span>
+        <p-dropdown formControlName="department"  [options]="departmentList" [filter]="true" optionLabel="departmentName" placeholder="Select a department" [style]="{'width':'100%'}"></p-dropdown>
+       
+      </div>
+    </div>
+
+  
+  
+    <div class="row">
+      <div class="form-group">
+      <label class="col-sm-3 control-label" for="form-control-1">first name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" formControlName="firstName" placeholder="Enter First name">
+      </div>
+    </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group">
+      <label class="col-sm-3 control-label" for="form-control-1">Last Name</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" formControlName="lastName" placeholder="Enter Last Name">
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+      <label class="col-sm-3 control-label" for="form-control-1">Email</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" formControlName="email" placeholder="Enter email">
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+      <label class="col-sm-3 control-label" for="form-control-1">Phone Number</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" formControlName="phoneNo" placeholder="Enter Phone Number">
+      </div>
+    </div>
+    </div>
+ 
+    <div class="row">
+        <div class="form-group">
+        <label class="col-sm-3 control-label" for="form-control-1">Employee Id</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" formControlName="employeeId" placeholder="Enter employee Id">
+        </div>
+      </div>
+      </div>
+    <div class="row">
+      <div class="form-group">
+      <label class="col-sm-3 control-label" for="form-control-1">Address</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" formControlName="address" placeholder="Enter Address">
+      </div>
+    </div>
+    </div>
+ 
+    
+  
+  
+  
+  
+   
+  
+  
+  <button type="submit" class="btn btn-space btn-success"><i class="icon icon-left mdi mdi-check"></i>Submit</button>                          
+  </form>

@@ -11,31 +11,31 @@ import { Subscription } from 'rxjs';
 export class DepartmentComponent implements OnInit {
 
   // --- for modal
-  modalRef: BsModalRef;
+  // modalRef: BsModalRef;
   // --- Subscription 
-  private subscription: Subscription = new Subscription();
+  // private subscription: Subscription = new Subscription();
   constructor(
-    private modalService: BsModalService,
-    private departmentService: DepartmentService
+    // private modalService: BsModalService,
+    // private departmentService: DepartmentService
   ) { }
 
 
   ngOnInit() {
 
     // --- add subscribe methode to the subscription object
-    this.subscription.add(
-      this.departmentService.get_ngxModal_add_$().subscribe(data => {
-        if (data) {
-          this.modalRef.hide();
-          this.departmentService._set_ngxModal_add(false)
-        }
+    // this.subscription.add(
+    //   this.departmentService.get_ngxModal_add_$().subscribe(data => {
+    //     if (data) {
+    //       this.modalRef.hide();
+    //       this.departmentService._set_ngxModal_add(false)
+    //     }
 
-      })
-    );
+    //   })
+    // );
   }
 
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
-  }
+  // openModal(template: TemplateRef<any>) {
+  //   this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
+  // }
 }

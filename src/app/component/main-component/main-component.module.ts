@@ -1,3 +1,6 @@
+import { ListuserComponent } from './../user/listuser/listuser.component';
+import { AdduserComponent } from './../user/adduser/adduser.component';
+import { UserComponent } from './../user/user.component';
 import { StudentCourseComponent } from './../student-course/student-course.component';
 import { CourseListComponent } from './../course/course-list/course-list.component';
 import { AddCourseComponent } from './../course/add-course/add-course.component';
@@ -56,7 +59,11 @@ import { LectureListComponent } from '../lecture/lecture-list/lecture-list.compo
     CourseComponent,
     AddCourseComponent,
     CourseListComponent,
-    StudentCourseComponent
+    StudentCourseComponent,
+    UserComponent,
+    AdduserComponent,
+    ListuserComponent,
+    
 
 
 

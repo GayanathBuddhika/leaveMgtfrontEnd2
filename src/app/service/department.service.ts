@@ -14,40 +14,42 @@ export class DepartmentService {
   public _addDepartmentToList = new Subject<Department>();
   public _editDepartmentToList = new Subject<Department>();
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+    ) { }
 
 
   getAllDepartments() {
     //const headers = new HttpHeaders({ "Access-Control-Allow-Origin": "*" });
 
-    return this.http.get<any>("http://localhost:8080/department/findAllDepartment/");
+    return this.http.get<any>("http://localhost:8080/department/findAll/");
   }
 
-  addDepartment(department: Department) {
-    //const headers = new HttpHeaders({ "Access-Control-Allow-Origin": "*" });
+  // addDepartment(department: Department) {
+  //   //const headers = new HttpHeaders({ "Access-Control-Allow-Origin": "*" });
 
-    return this.http.post<any>("http://localhost:8080/department/addDepartment/", department);
-  }
+  //   return this.http.post<any>("http://localhost:8080/department/addDepartment/", department);
+  // }
   
-   deleteDepartment(departmentId: string) {
-    //const headers = new HttpHeaders({ "Access-Control-Allow-Origin": "*" });    
-    return this.http.post<any>("http://localhost:8080/department/deleteDepartment/"+ departmentId,{});
-  }
+  //  deleteDepartment(departmentId: string) {
+  //   //const headers = new HttpHeaders({ "Access-Control-Allow-Origin": "*" });    
+  //   return this.http.post<any>("http://localhost:8080/department/deleteDepartment/"+ departmentId,{});
+  // }
 
 
-  _set_ngxModal_add(value: boolean) {
-    this._ngxModal_add.next(value);
-  }
+  // _set_ngxModal_add(value: boolean) {
+  //   this._ngxModal_add.next(value);
+  // }
 
-  get_ngxModal_add_$(): Observable<boolean> {
-    return this._ngxModal_add.asObservable();
-  }
+  // get_ngxModal_add_$(): Observable<boolean> {
+  //   return this._ngxModal_add.asObservable();
+  // }
 
-  _set_ngxModal_edit(value: boolean) {
-    this._ngxModal_edit.next(value);
-  }
+  // _set_ngxModal_edit(value: boolean) {
+  //   this._ngxModal_edit.next(value);
+  // }
 
-  get_ngxModal_edit_$(): Observable<boolean> {
-    return this._ngxModal_edit.asObservable();
-  }
+  // get_ngxModal_edit_$(): Observable<boolean> {
+  //   return this._ngxModal_edit.asObservable();
+  // }
 }

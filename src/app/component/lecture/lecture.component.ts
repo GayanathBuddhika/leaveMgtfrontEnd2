@@ -8,25 +8,25 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap';
   styleUrls: ['./lecture.component.scss']
 })
 export class LectureComponent implements OnInit {
-  modalRef: BsModalRef
+  // modalRef: BsModalRef
   constructor(
-    private modalService: BsModalService,
-    private lectureService: LectureServiceService
+    // private modalService: BsModalService,
+    // private lectureService: LectureServiceService
   ) { }
 
   ngOnInit() {
-    this.lectureService.get_ngxModal_add_$().subscribe(data => {
-      if (data) {
-        this.modalRef.hide();
-        this.lectureService._set_ngxModal_add(false)
-      }
+    // this.lectureService.get_ngxModal_add_$().subscribe(data => {
+    //   if (data) {
+    //     this.modalRef.hide();
+    //     this.lectureService._set_ngxModal_add(false)
+    //   }
 
-    })
+    // })
   }
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
-  }
+  // openModal(template: TemplateRef<any>) {
+  //   this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
+  // }
 
 
 }
